@@ -4,9 +4,11 @@ pipeline {
         DOCKER_IMAGE = 'jeniks-deploy'
     }
     stages {
-        stage('Clone') {
+        //stage('Clone') {
+        stage('Pull') {
             steps {
-                git 'https://github.com/shudhanshu2022/learning.git'
+                sh 'git pull'
+                //git 'https://github.com/shudhanshu2022/learning.git'
             }
         }
         stage('Install') {
