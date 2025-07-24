@@ -7,7 +7,7 @@ pipeline {
         //stage('Clone') {
         stage('Pull') {
             steps {
-                sh 'git pull'
+                sh 'git pull origin master'
                 //git 'https://github.com/shudhanshu2022/learning.git'
             }
         }
